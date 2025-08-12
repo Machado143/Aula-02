@@ -55,7 +55,7 @@ ROOT_URLCONF = 'aula02.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # Adicionado o caminho para templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,9 +103,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'pt-br'  # Alterado para português brasileiro
+TIME_ZONE = 'America/Sao_Paulo'  # Alterado para fuso horário do Brasil
 
 USE_I18N = True
 
