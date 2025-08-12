@@ -6,7 +6,7 @@
     <title>Aula02 - Blog</title>
 </head>
 <body>
-    (% for pp in posts % )
+    {% for pp in posts %}
         <div>
             <h2>{{pp.titulo}}</h2>
                 <p><strong>Autor:</strong> {{pp.autor}}</p>
@@ -15,6 +15,6 @@
                 <p>{{pp.conteudo}}</p>
            
         </div>
-    (% endfor %)
+    {% endfor %}
 </body>
 </html>
