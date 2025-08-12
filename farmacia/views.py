@@ -3,5 +3,5 @@ from .models import Post
 
 # Create your views here.
 def inicio(request):
-    meu_post = Post.objects.get(id = 1)
-    return render(request, 'inicio.html'), {'post1': meu_post}
+    meu_posts = Post.objects.all()
+    return render(request, 'inicio.html', {'posts': meu_posts})
