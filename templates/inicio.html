@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula02 - Blog</title>
+    <title>Blog da Farmácia</title>
 </head>
 <body>
-    {% for pp in posts %}
-        <div>
-            <h2>{{pp.titulo}}</h2>
-                <p><strong>Autor:</strong> {{pp.autor}}</p>
-                <p><strong>Postado em:</strong>
-                {{pp.data_postagem|date:"d/m/Y H:i"}}</p>
-                <p>{{pp.conteudo}}</p>
-           
+    <h1> Blog da Farmácia</h1>
+    
+    {% for artigo in artigos %}
+        <div class="artigo">
+            <h2>{{artigo.titulo}}</h2>
+            <div class="meta">
+                <strong>Autor:</strong> {{artigo.autor}} | 
+                <strong>Data:</strong> {{artigo.data_postagem|date:"d/m/Y H:i"}}
+            </div>
+            <div class="conteudo">
+                <p>{{artigo.conteudo}}</p>
+            </div>
         </div>
     {% endfor %}
 </body>

@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import Post
+from .models import Artigo
 
 # Create your views here.
 def inicio(request):
-    meu_posts = Post.objects.all()
-    return render(request, 'inicio.html', {'posts': meu_posts})
+    artigos = Artigo.objects.all()
+    return render(request, 'inicio.html', {'artigos': artigos})
